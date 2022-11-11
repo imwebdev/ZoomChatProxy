@@ -54,7 +54,7 @@ function start(){
     });
     user.on("question",(question)=>{
       console.log("new question",question)
-      Questions.push({"question":question,"username":user.userName});
+      Questions.push({"question":question,"username":user.userName, "uid":uid(5)});
       if(Config.H2RAdress != ""){
         axios.post(Config.H2RAdress,{"messages": [{ "id": uid(5),
                   "snippet": {
